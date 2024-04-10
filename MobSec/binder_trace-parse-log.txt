@@ -1,0 +1,436 @@
+2023-11-21 15:03:29,320: ERROR unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+2023-11-21 15:03:29,323: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 142, in on_message_in
+    read_interface_input(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 310, in read_interface_input
+    parse(invar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 269, in parse
+    parse_value_from_definition(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 190, in parse_value_from_definition
+    return parcel.parse_field(name, "", reader, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 388, in readString16Vector
+    self._read_vector("string", self.readString16, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 415, in _read_vector
+    self.parse_field(str(i), type_name, reader, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 178, in readString16
+    self._read_string("utf_16_le", 2, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 152, in _read_string
+    length_field = self.parse_field("Length", "uint32", self.readInt32, parent)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 107, in readInt32
+    b = struct.unpack_from("<i", self.data, self.pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+
+2023-11-21 15:04:01,381: ERROR unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+2023-11-21 15:04:01,383: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 142, in on_message_in
+    read_interface_input(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 310, in read_interface_input
+    parse(invar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 269, in parse
+    parse_value_from_definition(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 190, in parse_value_from_definition
+    return parcel.parse_field(name, "", reader, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 388, in readString16Vector
+    self._read_vector("string", self.readString16, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 415, in _read_vector
+    self.parse_field(str(i), type_name, reader, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 178, in readString16
+    self._read_string("utf_16_le", 2, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 152, in _read_string
+    length_field = self.parse_field("Length", "uint32", self.readInt32, parent)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 107, in readInt32
+    b = struct.unpack_from("<i", self.data, self.pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+
+2023-11-21 15:04:06,561: ERROR unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+2023-11-21 15:04:06,564: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 142, in on_message_in
+    read_interface_input(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 310, in read_interface_input
+    parse(invar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 269, in parse
+    parse_value_from_definition(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 190, in parse_value_from_definition
+    return parcel.parse_field(name, "", reader, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 388, in readString16Vector
+    self._read_vector("string", self.readString16, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 415, in _read_vector
+    self.parse_field(str(i), type_name, reader, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 178, in readString16
+    self._read_string("utf_16_le", 2, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 152, in _read_string
+    length_field = self.parse_field("Length", "uint32", self.readInt32, parent)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 107, in readInt32
+    b = struct.unpack_from("<i", self.data, self.pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+
+2023-11-21 15:05:07,886: INFO Dynamic Parcelable type name not found
+2023-11-21 15:05:09,496: ERROR 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+2023-11-21 15:05:09,501: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 90, in on_message_out
+    read_interface_output(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 291, in read_interface_output
+    parse(outvar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 167, in parse_parcel_type
+    return binder_trace.overrides.parcelableOverride(parcel, parcelType, name, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 67, in parcelableOverride
+    parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 494, in parseInputChannel
+    parcel.parse_field("name", "string", parcel.readCString8, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 143, in readCString8
+    parent.content = s.decode("utf_8")
+                     ^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+
+2023-11-21 15:05:10,716: ERROR unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+2023-11-21 15:05:10,718: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 142, in on_message_in
+    read_interface_input(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 310, in read_interface_input
+    parse(invar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 269, in parse
+    parse_value_from_definition(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 190, in parse_value_from_definition
+    return parcel.parse_field(name, "", reader, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 388, in readString16Vector
+    self._read_vector("string", self.readString16, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 415, in _read_vector
+    self.parse_field(str(i), type_name, reader, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 178, in readString16
+    self._read_string("utf_16_le", 2, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 152, in _read_string
+    length_field = self.parse_field("Length", "uint32", self.readInt32, parent)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 107, in readInt32
+    b = struct.unpack_from("<i", self.data, self.pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+
+2023-11-21 15:05:17,186: INFO Dynamic Parcelable type name not found
+2023-11-21 15:08:14,382: ERROR unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+2023-11-21 15:08:14,385: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 142, in on_message_in
+    read_interface_input(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 310, in read_interface_input
+    parse(invar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 269, in parse
+    parse_value_from_definition(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 190, in parse_value_from_definition
+    return parcel.parse_field(name, "", reader, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 388, in readString16Vector
+    self._read_vector("string", self.readString16, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 415, in _read_vector
+    self.parse_field(str(i), type_name, reader, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 178, in readString16
+    self._read_string("utf_16_le", 2, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 152, in _read_string
+    length_field = self.parse_field("Length", "uint32", self.readInt32, parent)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 107, in readInt32
+    b = struct.unpack_from("<i", self.data, self.pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+
+2023-11-21 15:08:20,083: ERROR unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+2023-11-21 15:08:20,086: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 142, in on_message_in
+    read_interface_input(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 310, in read_interface_input
+    parse(invar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 269, in parse
+    parse_value_from_definition(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 190, in parse_value_from_definition
+    return parcel.parse_field(name, "", reader, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 388, in readString16Vector
+    self._read_vector("string", self.readString16, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 415, in _read_vector
+    self.parse_field(str(i), type_name, reader, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 178, in readString16
+    self._read_string("utf_16_le", 2, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 152, in _read_string
+    length_field = self.parse_field("Length", "uint32", self.readInt32, parent)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 107, in readInt32
+    b = struct.unpack_from("<i", self.data, self.pos)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack_from requires a buffer of at least 312 bytes for unpacking 4 bytes at offset 308 (actual buffer size is 308)
+
+2023-11-21 15:08:22,410: ERROR 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+2023-11-21 15:08:22,413: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 90, in on_message_out
+    read_interface_output(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 291, in read_interface_output
+    parse(outvar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 167, in parse_parcel_type
+    return binder_trace.overrides.parcelableOverride(parcel, parcelType, name, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 67, in parcelableOverride
+    parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 494, in parseInputChannel
+    parcel.parse_field("name", "string", parcel.readCString8, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 143, in readCString8
+    parent.content = s.decode("utf_8")
+                     ^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+
+2023-11-21 15:08:22,709: ERROR 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+2023-11-21 15:08:22,712: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 90, in on_message_out
+    read_interface_output(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 291, in read_interface_output
+    parse(outvar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 167, in parse_parcel_type
+    return binder_trace.overrides.parcelableOverride(parcel, parcelType, name, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 67, in parcelableOverride
+    parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 494, in parseInputChannel
+    parcel.parse_field("name", "string", parcel.readCString8, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 143, in readCString8
+    parent.content = s.decode("utf_8")
+                     ^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+
+2023-11-21 15:08:23,055: INFO Dynamic Parcelable type name not found
+2023-11-21 15:08:24,793: ERROR 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+2023-11-21 15:08:24,795: ERROR Traceback (most recent call last):
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 90, in on_message_out
+    read_interface_output(call, parcel, root_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 291, in read_interface_output
+    parse(outvar, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 168, in parse_parcel_type
+    retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 347, in readParcelable
+    self._read_parcelable(struct_definition, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 326, in _read_parcelable
+    parse(var, self, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 267, in parse
+    parse_conditional(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 213, in parse_conditional
+    parse(var, parcel, conditional_field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 257, in parse
+    parse_parcel_type(definition, parcel, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parsing.py", line 167, in parse_parcel_type
+    return binder_trace.overrides.parcelableOverride(parcel, parcelType, name, parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 67, in parcelableOverride
+    parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/overrides.py", line 494, in parseInputChannel
+    parcel.parse_field("name", "string", parcel.readCString8, parent)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 34, in parse_field
+    read_func(field)
+  File "/home/jerome/Uni-Master/MobSec/venv/lib/python3.11/site-packages/binder_trace/parcel.py", line 143, in readCString8
+    parent.content = s.decode("utf_8")
+                     ^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x85 in position 0: invalid start byte
+

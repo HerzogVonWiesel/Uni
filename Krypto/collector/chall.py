@@ -13,7 +13,7 @@ def MGF(seed : bytes, length : int):
 	random.seed(seed)
 	return [random.randint(0,255) for _ in range(length)]
 
-def pad(stream : bytes, bitlength : int, tag = b'' : bytes):
+def pad(stream : bytes, bitlength : int, tag = b''):
 	seed = sha256(stream).digest()
 	DB = sha256(tag).digest() + b'\x00' * ((bitlength - 16 - 2*hLen) // 8 - len(stream)) + b'\x01' + stream
 	mask = MGF(seed, len(DB))
