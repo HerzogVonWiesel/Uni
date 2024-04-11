@@ -39,6 +39,28 @@ void OrderedLinkedList::add(int key, int value) {
 
 }
 
-void OrderedLinkedList::remove(int key) {}
+void OrderedLinkedList::remove(int key) {
+    Node* current = head;
+    Node* prev = nullptr;
+    while (current != nullptr && current->key != key) {
+        prev = current;
+        current = current->next_node;
+    }
+    if (current == nullptr) {
+        return;
+    }
+    if (prev == nullptr) {
+        head = current->next_node;
+    } else {
+        prev->next_node = current->next_node;
+    }
+    delete current;
+}
 
-Node* OrderedLinkedList::find(int key) { return nullptr; }
+Node* OrderedLinkedList::find(int key) {
+    Node* current = head;
+    while (current != nullptr && current->key != key) {
+        current = current->next_node;
+    }
+    return current;
+ }

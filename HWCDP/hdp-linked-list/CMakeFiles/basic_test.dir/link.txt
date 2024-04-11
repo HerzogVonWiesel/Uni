@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/basic_test.dir/test/basic.cpp.o -o basic_test  liblinked_list.a lib/libgtest.a lib/libgmock.a -lpthread lib/libgtest.a 

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/advanced_test.dir/test/advanced.cpp.o -o advanced_test  liblinked_list.a lib/libgtest.a lib/libgmock.a -lpthread lib/libgtest.a 
