@@ -1,0 +1,139 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "source",
+					"jsonFile" : "directory-source-Debug-5b5a50b02d94cdb5eb2c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "source",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "CPT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "23o5::@411ffd8adc737496fe19",
+					"jsonFile" : "target-23o5-Debug-c72dc421964a8689dcf8.json",
+					"name" : "23o5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "casting::@411ffd8adc737496fe19",
+					"jsonFile" : "target-casting-Debug-ee3e3fcf7c50fb03c7ce.json",
+					"name" : "casting",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "farida::@411ffd8adc737496fe19",
+					"jsonFile" : "target-farida-Debug-4999f7a9c2d30856ce0f.json",
+					"name" : "farida",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "joust::@411ffd8adc737496fe19",
+					"jsonFile" : "target-joust-Debug-cd4676c52f1257215f2c.json",
+					"name" : "joust",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "knapsack::@411ffd8adc737496fe19",
+					"jsonFile" : "target-knapsack-Debug-9edb038c473838815ea8.json",
+					"name" : "knapsack",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "order::@411ffd8adc737496fe19",
+					"jsonFile" : "target-order-Debug-57b5acdc5cfea3acb67c.json",
+					"name" : "order",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "recommend::@411ffd8adc737496fe19",
+					"jsonFile" : "target-recommend-Debug-704c0ce82176f6d582a2.json",
+					"name" : "recommend",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "skiing2::@411ffd8adc737496fe19",
+					"jsonFile" : "target-skiing2-Debug-048ccf9ad068c21261e1.json",
+					"name" : "skiing2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/c/Uni_Master/CompProg/cmake-build-debug",
+		"source" : "/mnt/c/Uni_Master/CompProg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

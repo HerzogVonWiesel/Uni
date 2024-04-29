@@ -1,0 +1,8 @@
+add_executable(example example.cpp)
+add_executable(chocolate chocolate.cpp)
+add_executable(applepie applepie.cpp)
+add_executable(guessds guessds.cpp)
+add_executable(snowflake snowflake.cpp)
+add_executable(raining raining.cpp)
+add_executable(parpuz parpuz.cpp)
+add_executable(fences fences.cpp)

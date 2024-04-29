@@ -19,6 +19,8 @@ OrderedLinkedList::~OrderedLinkedList() {
 }
 
 void OrderedLinkedList::add(int key, int value) {
+    std::lock_guard<std::mutex> guard(list_lock);
+
     if (head == nullptr) {
         head = new Node(key, value);
         return;
@@ -40,6 +42,8 @@ void OrderedLinkedList::add(int key, int value) {
 }
 
 void OrderedLinkedList::remove(int key) {
+    std::lock_guard<std::mutex> guard(list_lock);
+
     Node* current = head;
     Node* prev = nullptr;
     while (current != nullptr && current->key != key) {
@@ -57,7 +61,9 @@ void OrderedLinkedList::remove(int key) {
     delete current;
 }
 
-Node* OrderedLinkedList::find(int key) {
+Node* OrderedLinkedList::find(int key) { 
+    std::lock_guard<std::mutex> guard(list_lock);
+
     Node* current = head;
     while (current != nullptr && current->key != key) {
         current = current->next_node;

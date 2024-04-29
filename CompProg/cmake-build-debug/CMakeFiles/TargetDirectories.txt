@@ -1,0 +1,12 @@
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/23o5.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/recommend.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/casting.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/order.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/joust.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/skiing2.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/farida.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/knapsack.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/edit_cache.dir
+/mnt/c/Uni_Master/CompProg/cmake-build-debug/source/CMakeFiles/rebuild_cache.dir

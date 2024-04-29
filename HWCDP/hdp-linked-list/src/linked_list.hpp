@@ -2,6 +2,8 @@
 
 #include "node.hpp"
 
+#include <mutex>
+
 /** Concurrent Ordered Linked List
  *
  * Elements must be inserted in ascending order, i.e., 1, 2, 3, .., N
@@ -12,6 +14,7 @@ class OrderedLinkedList {
  private:
   Node* head = nullptr;
   /** You may add variables here, if needed. */
+  std::mutex list_lock;
 
 
  public:
